@@ -42,9 +42,9 @@ def scan_webpage_tool(urls: list[str]) -> str:
 
             return contents
 
-        elif response and response.get("error"):
-            print(f"[Tavily Extract Tool] API Error: {response['error']}")
-            return f"Tavily failed to extract content. Error: {response['error']}"
+        elif response and response.get("failed_results"):
+            print(f"[Tavily Extract Tool] API Error: {response['failed_results']}")
+            return f"Tavily failed to extract content. Error: {response['failed_results']}"
         else:
             return f"Tavily returned no content or an unexpected response for {url}."
 
