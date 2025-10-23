@@ -143,6 +143,28 @@ source venv/bin/activate
 python main.py
 ```
 
+### API example: chat endpoint
+
+You can interact with the running agent via a simple HTTP POST to the `/chat` endpoint. Example using curl:
+
+```bash
+curl -X POST "http://127.0.0.1:8000/chat" \
+       -H "Content-Type: application/json" \
+       -d '{
+                "message": "Who are you?",
+                "session_id": "test-123"
+             }'
+```
+
+Fields explained:
+- `message` (string): The user's input text or prompt you want the agent to respond to. This can be a question, instruction, or any text.
+- `session_id` (string): An identifier for the conversation session. Use the same `session_id` for messages that belong to the same conversation so the agent can maintain context between requests.
+
+Notes:
+- Make sure the server is running on `127.0.0.1:8000` (adjust host/port if different)
+- The endpoint expects JSON and returns a JSON response with the agent's reply
+
+
 ## Security Note
 
 This tool is designed for educational and research purposes only. Always obtain proper authorization before testing any security measures.
