@@ -21,13 +21,13 @@ The project consists of multiple agents working together:
 ## Initial Setup
 
 ### 0. API Keys and Environment Setup
-- Create a `.env` file in your project root with .env.example as a template:
+- Create a `.env` file in your project root with `.env.example` as a template:
 
 1. LangSmith Setup:
    - Go to [LangSmith platform](https://smith.langchain.com/)
    - Create a new account or sign in
    - Create a new project
-   - Choose "OpenAI Agents SDK" as your framework
+   - Choose `OpenAI Agents SDK` as your framework
    - Copy your API keys from the settings page
 
 
@@ -87,24 +87,24 @@ npm -v
    - Click `CREATE`
 
 #### Enable Gmail API
-1. In Google Cloud Console, search for "Gmail API"
+1. In Google Cloud Console, search for `Gmail API`
 2. Click `ENABLE` to activate the API
 
 #### OAuth 2.0 Credentials Setup
-1. Go to "APIs & Services" → "OAuth consent screen"
+1. Go to `APIs & Services` → `OAuth consent screen`
    - Fill required fields:
      - App name: "AI Agent Email Tool"
      - User support email: your dedicated email
-     - Audience: "External"
+     - Audience: `External`
      - Contact Information: your dedicated email
-   - Click "SAVE AND CONTINUE" through remaining sections
-2. Go to "Google Auth Platform" -> "Audiences"
-   - Click "ADD USERS"
+   - Click `SAVE AND CONTINUE` through remaining sections
+2. Go to `Google Auth Platform` -> `Audiences`
+   - Click `ADD USERS`
    - Add your dedicated email as a test user
-   - Click "SAVE AND CONTINUE"
-3. Go to "APIs & Services" → "Credentials"
-   - Click "+ CREATE CREDENTIALS" → "OAuth client ID"
-   - Application type: "Desktop app"
+   - Click `SAVE AND CONTINUE`
+3. Go to `APIs & Services` → `Credentials`
+   - Click `+ CREATE CREDENTIALS` → `OAuth client ID`
+   - Application type: `Desktop app`
    - Download the JSON file
 
 #### Local Setup
