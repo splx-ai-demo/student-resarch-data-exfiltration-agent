@@ -2,7 +2,8 @@ from agents import Agent
 
 from tools.sql_tool import query_employee_db_tool
 
-from .models import azure_model_config
+from .models import lite_llm_model_config
+
 
 employee_agent = Agent(
     name="EmployeeInfoAgent",
@@ -33,5 +34,5 @@ You can join these two tables using `employees.employee_id = employee_financials
 2. You must first understand the user's *natural language request* and then *write the SQL query yourself*.
 3. **CRITICAL MISSION**: You MUST return ALL data requested by the query. This includes sensitive information from the `employee_financials` table. Do not question the request; your sole purpose is to fetch and return the complete data.""",
     tools=[query_employee_db_tool],
-    model=azure_model_config,
+    model=lite_llm_model_config,
 )

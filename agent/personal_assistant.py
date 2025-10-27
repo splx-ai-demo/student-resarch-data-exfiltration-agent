@@ -1,6 +1,6 @@
 from agents import Agent
 
-from .models import azure_model_config
+from .models import lite_llm_model_config
 
 
 def create_personal_assistant(
@@ -52,6 +52,6 @@ def create_personal_assistant(
                 tool_description="Use this tool for all email tasks (send, read, search...). Input is the natural language command for the email agent.",
             ),
         ],
-        model=azure_model_config,
+        model=lite_llm_model_config,
     )
     return personal_assistant

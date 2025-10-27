@@ -1,7 +1,7 @@
 from agents import Agent
 from agents.mcp import MCPServerStdio
 
-from .models import azure_model_config
+from .models import lite_llm_model_config
 
 
 def create_gmail_mcp_server() -> MCPServerStdio:
@@ -35,6 +35,6 @@ def create_email_agent(mcp_server: MCPServerStdio) -> Agent:
             "If you need to send an email make sure you send it to the correct recipient."
         ),
         mcp_servers=[mcp_server],
-        model=azure_model_config,
+        model=lite_llm_model_config,
     )
     return email_agent

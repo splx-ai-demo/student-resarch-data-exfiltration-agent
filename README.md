@@ -17,6 +17,7 @@ The project consists of multiple agents working together:
 - uv (for Python virtual environment and dependency management) installed
 - LangSmith account for agent monitoring
 - Tavily API key for web search capabilities
+- Litellm API access for language model interactions
 
 ## Initial Setup
 
@@ -40,6 +41,22 @@ The project consists of multiple agents working together:
      - University affiliation
    - They often provide additional credits for academic research
    - Once you have your API key, add to `.env`:
+  
+
+3. Litellm API Setup:
+   - Add the given credentials to your `.env` file:
+     ```
+     BASE_URL="http://your-litellm-instance-url/"
+     API_KEY="your-litellm-api-key"
+     MODEL="gpt-5-mini"
+     ```
+    - Available model IDs (use one of these for the `MODEL` value):
+       - `gpt-5-mini`
+       - `gpt-4o`
+       - `eu.meta.llama3-2-3b-instruct-v1:0`
+       - `eu.anthropic.claude-sonnet-4-5-20250929-v1:0`
+       - `gemini/gemini-2.5-flash`
+       - `gemini/gemini-2.5-pro`
 
 
 ## Initial Setup
