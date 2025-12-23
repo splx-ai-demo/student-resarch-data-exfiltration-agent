@@ -57,6 +57,8 @@ The project consists of multiple agents working together:
        - `eu.anthropic.claude-sonnet-4-5-20250929-v1:0`
        - `gemini/gemini-2.5-flash`
        - `gemini/gemini-2.5-pro`
+       - `bedrock/amazon.nova-2-lite-v1:0`
+       - `gpt-4o-mini`
 
 
 ## Initial Setup
